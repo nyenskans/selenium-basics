@@ -1,0 +1,43 @@
+
+
+
+WebElement in Selenium: Operations performed on the WebElements
+In order to access WebElements, we need to perform a set of operations starting with browser actions until the operations are performed on  frames.
+Operations performed on the browser
+Launch the browser
+Navigate to particular web page
+Close the current browser
+Close all browsers opened by WebDriver during execution
+Maximize browser
+Refresh the browser
+Operations on the web page
+Get page title
+Get page URL
+Operations on edit box
+Enter a value
+Get the value
+Clear the value
+Operations on link
+Click the link
+Return the link name
+Operations on button
+Click enabled
+Display status
+Operations on image
+General image(No functionality)
+Image button(click)
+Image link(redirects to another page)
+Operations on text area
+Return or capture the messages from the web page
+Operations on checkbox
+Select the checkbox
+Unselect the checkbox
+Operations on radio button
+Select radio button
+Check if it displays the radio button
+Operations on drop down
+Select an item in the list
+Get the item count
+Operations on frame
+Switch from top window to a particular frame on the web page
+Switch to a frame to top window

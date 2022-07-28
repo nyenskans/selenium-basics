@@ -1,0 +1,12 @@
+
+                            WebElement Commands
+
+Consists of several methods where we can perform an action and get the element state on the webpage:
+
+isEnabled()-->boolean
+isDisplayed()-->boolean
+isSelected()-->boolean
+clear()--> void method ( no return, when we delete text from a field-textBox)
+getText()--> String (to get text from an element)
+getAttribute()--> String (to get attribute value)
+submit()--> void (no return, instead of click)

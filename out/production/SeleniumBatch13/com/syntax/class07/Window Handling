@@ -1,0 +1,18 @@
+            Window Handling
+
+Handling multiple windows/tabs:
+
+To be able to handle multiple tabs we will be using 2 methods:
+1. getWindowHandle();
+2. getWindowHandles();
+
+WindowHandle is a unique ID assigned to a specific window/tab ( holds an address of a window/tab )
+It is an approximately 40 alphanumeric character long ID (dataType String)
+
+We need these ids to be able to switch between tabs
+
+Once we have multiple tabs open, we will use method getWindowHandles() to get all of their ids.
+We store them in a Set (because it doesn't allow duplicate values) and then use Iterator to loop through all of them
+
+The first tab we opened it will be called parent handle; the new tabs are child handles
+

@@ -1,0 +1,7 @@
+
+
+WebDriver is an interface with all the method names (it's just pushing the contracts on to the classes
+ and they have to implement all the methods). It enforces the contract for a class to follow.
+
+ Every Browser comes with one class--> all methods have same names, different implementation. They have all implemented
+ WebDriver methods and all their own personal methods

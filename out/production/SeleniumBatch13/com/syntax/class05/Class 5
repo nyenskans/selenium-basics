@@ -1,0 +1,38 @@
+                     Checkboxes and RadioButtons
+
+Handling Checkboxes and RadioButtons:
+
+            Two ways:
+
+    1. If we only have one checkbox or radiobutton, we locate it and click on it
+    2. If we have multiple elements/choices we store them to a list, loop through them and then use if condition
+
+// Whenever we use findElements and store it in a list, it will automatically be converted into an arrayList
+When we are identifying multiple elements they don't need to be unique--> checkboxes on syntaxproject.com
+
+--> CheckboxDemo class
+
+The logic is identical for RadioButtons
+
+
+
+        Dropdown menus
+
+    - list or a menu of options
+    - it gives us an opportunity to select one or more options
+
+        Two types of drop down menus:
+
+    1. single select
+    2. multiple select
+
+         Ways to handle dropdowns:
+    1. click on dropdown and click on option
+    2. using Select class (built-in class)
+    In order to use Select class we need to make sure that it has a select tag
+
+         Selecting an option from a dropdown can be done in 3 ways:
+
+    1. by index
+    2. by visible text
+    3. by value

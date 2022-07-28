@@ -1,0 +1,17 @@
+
+
+Types of Selenium waits:
+1. implicit
+2. explicit
+3. fluent
+
+1. Implicit Wait or Global Wait
+    Applied for findElements() methods;
+    waits for a set amount of time before throwing an exception;
+    if found within the time, the remaining time is disregarded
+
+ 2. Explicit Wait or WebDriver wait
+    It is used to tell the WebDriver to wait for a certain condition to be met before throwing an Exception
+    (for that specified condition)
+    Works with ExpectedConditions class (from Selenium Library)
+    isDisplayed/isEnabled/isSelected

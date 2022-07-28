@@ -1,0 +1,32 @@
+                        Frames
+
+Frames are separate and independent windows on the webpage. (usually with different content)
+They allow developers to represent multiple different views on one webpage.
+
+ To see how many frames we have on the page, we look them up int the DOM by //iframe (we may or may not see them on the page
+ but they are located in the dom)
+ In order to interact with them in Selenium, we need to switch our focus on to the frames as well.
+ (Each iframe has another page with <html> tag)
+
+We use .switchTo().frame() method to switch the focus to the frame
+
+ 3 ways to switch focus to a frame:
+    1. By index  .frame(index)
+    2. By name/id .frame("name"/"id")
+    3. By using WebElement .frame(WebElement)
+
+To be able to interact with WebElements in frames, first we have to switch to the frame in which it's located
+If we try to locate the WebElement before switching, we will get an error : no such element, even though the locator is correct
+
+-Once we are done dealing with one frame, we have to switch back to the main page (or parent frame):
+    driver.switchTo().defaultContent();
+
+*3.  When we are switching the focus to the frame by WebElement : the frame itself is a WebElement in a webpage,
+so we locate it just like any other WebElement
+
+
+* Interview question:
+How do you handle alerts in Selenium?
+* Answer: by using (methods from) Alert interface
+
+** Alert interface doesn't get implemented by any class

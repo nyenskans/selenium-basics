@@ -1,0 +1,35 @@
+                                  Alerts
+
+
+Alert is a pop up message. They take focus away from our main page that we are on
+We cannot proceed further until it is handled.
+
+3 Types of alert:
+
+1. Web based alerts(pop up) / HTML alerts - can be inspected and we can perform actions on them
+2. js based alerts / browser alerts - cannot be inspected, we can handle them by using switchTo method
+3. window based alerts - cannot be handled by Selenium / desktop application pop up
+(example when you are uploading a file to a web page, a window of our system pops up for us to choose a file)
+
+* captcha pop ups can't be handled
+
+Types of javascript alerts:
+1. simple alert - we can only click OK button
+2. confirmation alert - offers 2 options - ok/cancel
+3. prompt alert - has input field and ok / we can enter text and click OK or cancel
+
+To handle js alerts we only have 4 methods:
+
+1. .accept() - click ok/accept
+2. .dismiss() - click no/cancel
+3. .getText() - get the message of the pop up
+4. .sendKeys() - enter text (for prompt alert)
+
+
+*AuthenticationAlert:
+ These types of alerts show up as soon as the page loads--> pops up and gives us a field to enter password/username
+ to be able to access the website:
+ Handled by inserting password and username in the url right after // in the format: username:password@
+ Similar to a js alert, but not the same because it is handled without using the Alert interface or .switchTo() method.
+
+

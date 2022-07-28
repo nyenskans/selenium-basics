@@ -1,0 +1,33 @@
+
+
+                    Synchronization
+
+
+A process of bringing the speed of one or more components to the same level
+In this case we are bringing our script and page load to the same speed
+
+Thread.sleep() --> static wait/ unconditional wait (we just pause execution for some time, not dependant on some condition)
+
+
+Types of Selenium waits:
+1. implicit
+2. explicit
+3. fluent
+
+1. Implicit wait
+    - Tells the web driver to wait a certain amount of time before throwing an exception.
+    - Only written once, applied to the whole session of your execution
+    - Also called a global wait
+    - Works with .findElements() method
+    - Usually set for 20 seconds, if the elements is found in less than the time set, the script  will continue with the
+     execution right away, regardless of the time left (the remaining time will be ignored)
+    - If the element is not found within the set time, only then Selenium will throw an Exception
+    --> e.g. No Element found/ No such Element exception
+
+
+
+
+
+
+
+

@@ -1,0 +1,188 @@
+                      Xpath and CSS Selectors
+
+
+Web Elements consist of Tags, attributes and attribute values
+
+Why we need xPath and CSS Selector
+-- developers may not provide all the locators in the element
+-- by using them we can identify elements with any given attributes
+
+We always want to identify the element uniquely
+
+What is an xpath?
+    It is a query language which helps us identify elements uniquely on a webpage
+
+With xpath we will see how unique found elements are (before running the code), while if we use a different type of locator
+if there are multiple elements with the same locator, it will only locate the first one
+
+        2 Types of Xpath
+
+1. absolute
+2. relative
+
+1. --> starts from the starting node of the html;
+        always starts with a single slash- /
+
+        How to write an xpath:
+        We write it inside the dom, see if it's unique and then go into the code:
+    1. absolute Xpath:
+command+F in inspect (bar opens up in the bottom of dom-->find by string, selector or xpath)
+example (on fb.com):
+/html/body/div/div/div --> same like a location on computer (folder by folder),
+ very rarely used in practice because the expressions are very long
+
+    2. relative xPath:
+starts from any node in html;
+Always starts with double slash--> //
+
+        Syntax:
+
+//tagname[@attribute ='attribute value']
+tagname (of element we need to locate)
+[@attribute='attribute value']-->(identify the attributes)
+example (on fb.com): //input[@id='email']
+*in the search bar if we see 1 of 1 in the right corner, we know the locator is unique
+*//input[@type='text']--> we can use type attribute even though it's not one of the locators--> gets highlighted and it says 1 of 1
+
+
+        When to use xpath:
+
+First look for id's as locators, if there are not any or they contain numbers, then go for xpath
+(in practice, this is mostly the case, or straight to xpath--> depending on the company/ team standard)
+
+***You ideally want to key your XPath to the first ascendant element that has an ID and then work your way down the tree.**
+
+
+Identifying elements by its text using Xpath:
+
+//tagname[text()='text value'] (any text on a button)
+example: create new account button (on fb.com)--> click on button w cursor--> expand element
+
+//a[text()='Create new account'] --> a is the tag name
+
+example--> element Connect with your friends
+//h2[text()='Connect with friends and the world around you on Facebook.']
+
+
+
+
+
+There is a way to identify elements by it's containing values and use it in Xpath (contains() method)
+
+//tagname[contains(@attribute, 'partial attribute value')] --> if the attribute value is very long
+(similar to partial link text)
+//input[contains(@placeholder, 'Email')]
+(field that says enter email or phone number)
+
+
+We can use the same method with text:
+ //h2[contains(text(), 'connect with')]
+//commonly used
+
+starts-with method will identify elements by it's partial starting value
+Syntax:
+//tagname[starts-with(@attribute, 'partial starting attribute value')]
+
+example:
+//input[starts-with(@aria-label,'Email')]
+element - enter your email/phone number
+
+** endsWith() doesn't exist in Xpath
+
+
+
+Sometimes we won't be able to locate any of the elements uniquely so we will have to use Advanced xpath
+Advanced Xpath is based on parent-child-sibling relationship
+
+
+                    We can identify the element using advanced xpath:
+
+    1. by the following siblings
+
+//tagname[@attribute='attribute value']/following-sibling::tagname
+following sibling is actually the element we want to locate (that doesn't have the unique attribute values)
+so first we locate the previous element and say the name of following element after
+// the sibling doesn't have to be the first following one, we can define an element and then the sibling is for example third one after
+e.g //input[@id = 'calFromDate']/following-sibling :: imp
+
+    2. by the preceeding siblings
+
+//tagname[@attribute='attribute value']/preceeding-sibling::tagname
+e.g //span[text() = '& Orders']/preceding-sibling :: span
+
+    3. by the parent
+
+ //tagname[@attribute='attribute value']/parent::tagname
+e.g. //span[text()='& Orders']/parent::a
+
+    4. by it's ancestors // not used a lot
+anything above parent
+
+** If the elements do not have a unique locator and for some reason we can't use the advanced Xpath, we can use indexing
+(//img[@class=ui-datepicker-trigger])
+
+
+
+homework
+//syntaxprojects.com
+start practicing
+
+
+
+
+
+                        CSS Selector (Cascading Style Sheet)
+
+            - another way of locating elements on the web page
+            - Mostly based on shortcuts
+
+  Syntax:
+            tagname[attribute = 'attribute value']
+  (no slash no @)
+  e.g. input [value='LOGIN']
+
+  CSS doesn't give us an option to locate elements by its text
+  we can use contains but in a different way
+
+
+  Shortcuts for CSS:
+   for certain attributes--> for class and ID
+
+                 1. Shortcut for classname --> "." (dot)
+  Syntax:
+           tagName.classNameValue
+  e.g. input.button
+
+
+                2. Shortcut for ID --> "#"
+ Syntax:
+            tagName#IDValue
+  e.g. input#txtPassword
+
+
+ - contains() method in css:
+  * (star) symbol will represent this method
+   Syntax:
+            tagname[attribute*='partial attribute value'] (the star means we are looking for a partial text contained in an attribute)
+
+  e.g. input[placeholder*='phone'] //if we put the value in double quotes and copy it in java, it will get messed up
+
+
+   ^ (Circumflex) symbol represents starts-with method
+  Syntax:
+         tagname[attribute^='partial attribute value']
+
+  e.g. input[aria-label^='Password']
+
+ends-with method in css:
+$ symbol represents ends-with method
+Syntax:
+            tagname[attribute$='partial attribute value']
+a[href $='login']
+
+
+
+        Xpath vs CSS Selector
+-- CSS cannot locate elements by text
+-- CSS has shortcuts and ends-with method
+-- performance-wise CSS Selectors are faster in locating elements than xpath

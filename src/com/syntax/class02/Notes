@@ -1,0 +1,57 @@
+
+
+Web elements:
+
+Anything we see on the webpage- links, buttons, textBoxes (fields to type something in), pictures, etc
+
+For us to start interacting with elements : right click --> inspect page--> dom shows in the bottom of the page
+ dom-->(browser's internal view of the webpage)
+
+--> it's in html (hyper text markup language)
+
+DOM--> Document Object Model --> internal view of the webpage (also called Developer's (dev) tools)
+Document --> a simple html documents represents the page we're inspecting
+Object--> any line in the page is an object
+Model --> it's just a layout
+
+Inside <body> on the page--> whenever something is highlighted it means the code refers to the highlighted area
+Whenever the color changes, it means it's the next line
+
+command+shift+c (or cursor) to select a certain element on the page--> select an element--> line of code in dom gets highlighted
+:--> dock location
+
+To work with those elements in selenium we must identify the locators first
+8 Locators:
+
+1. ID
+2. Name
+3. TagName
+4. ClassName
+    ---> attributes
+5. LinkText
+6. PartialLinkText
+7. CssSelectors
+8. xpath
+
+
+In the element we should look for ID first because it is unique (most of the time)
+Most elements have multiple locators (for example class, id, name etc)
+
+
+Any locators we see on elements are considered attributes (name, tabindex, type, class etc)
+If there are numbers in ID or class, we should use a different locator
+
+purple words are Tag names (tags)
+
+
+
+        Why do we need so many locators?
+
+-Some locators have duplicate (same) values in different elements, so it is good to have multiple
+(example class="txt"--> common value for class in a lot of elements--> selenium will only interact the first element it locates)
+--developers may not provide all the locators for all the elements
+--some locators may not be applicable for the elements we are looking for
+ (example linkText and partialLinkText are only available for links)
+
+ a tag is also called anchor tag
+

@@ -1,0 +1,18 @@
+
+
+
+1. Single select dropdowns (Static dropdowns)
+2. Multiselect dropdowns (Dynamic dropdown)
+
+How to deal with a dropdown:
+1. inspect dropdown to see if it has Select tag if  yes proceed with step 2.
+2. write the locator to get this particular dropdown in selenium
+3. create an object of Select class
+4. store all the objects in a list
+5. loop through the list and choose the desired option
+
+
+If it has a select tag we can use select class from Selenium and we can select a desired option by one of 3 ways:
+1. by index
+2. by value
+3. by visible text

@@ -1,0 +1,36 @@
+
+
+
+WebDriver is an interface
+Interfaces are abstract classes in which we only have abstract classes
+
+        Advantages of Selenium WebDriver:
+1. open-source
+2. works with different browsers, supports cross browsing testing
+3. works with different operating systems
+4. supports different programming languages--java, python, ruby, js
+
+
+        Disadvantages:
+1. cannot test desktop applications (only web based)
+2. no technical support
+3. no built in reports
+4. cannot test images, videos and captcha-s (we have to test those manually)
+
+        get() vs navigate()
+
+-navigate() can go back, forward and refresh a page
+-get() waits for the page to fully load, whereas navigate() doesn't
+-get () will not keep the history of the browser, navigate() will (in the history bar in the browser)
+
+
+        close() vs quit()
+
+-close() closes the current single tab
+-quit() closes the entire browser
+
+
+       fullscreen() vs maximize()
+
+-maximizes the page but we still see the control panel(back, forward, bookmarks)
+-fullscreen() takes up the whole screen, we don't see the control panel

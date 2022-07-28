@@ -1,0 +1,24 @@
+                    Frames
+
+Frames are separate independent windows in our webpage
+
+All the frames are embeded in the dom (they will all be located in the body of the page, not separate)
+
+If we want to access elements within the frame we have to switch focus to the frame because the focus is initially on the main page
+The frame is located on the main page but elements within the frame are not in the main page but in the frame (iframe)
+
+We can handle frames in Selenium with the help of following methods :
+
+1. switchTo().frame(frameNumber)
+This method uses the frame id as the parameter. The index of frame id starts from 0.
+NoSuchFrameException is thrown if the frame is not found.
+2. switchTo().frame(frameName or frame id)
+This method uses the frame name as defined by the developer as the parameter.
+The frame name is considered a String and is enclosed in quotes. NoSuchFrameException is thrown if the frame is not found.
+3. switchTo().frame(WebElement)
+This method uses the webElement as the parameter. NoSuchFrameException is thrown if the frame is not found.
+StaleElementReferenceException if the frame is no longer active.
+
+
+We cannot switch focus directly from frame to frame, we have to switch from frame to default and then to another frame
+

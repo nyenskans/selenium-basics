@@ -1,0 +1,49 @@
+                            Page Object Model
+
+POM is a design pattern which allows us to enhance the maintenance and reduce code duplicarion
+
+        Advantages:
+1. Code reusability
+2. Code maintanablity
+3. Object repository
+4. Readability
+
+       2 ways to implement POM:
+1. POM without PageFactory
+1. POM with PageFactory
+
+
+                4 packages:
+
+1. TESTBASE
+       - initialize the driver
+       - open browser
+       - close browser
+
+2. Pages
+    - all the web pages in form of classes and all it's WebElements:
+    - LoginPage (username, password, loginButton)
+    - *etc (we can perform actions on them)
+
+3. Tests
+    -*(combines all 3 other packages and performing tests)
+    - LoginPageTest (actions on the page) <-- call methods, import WebElements etc
+    - actions like send keys, click, verifications
+    - call methods from TESTBASE and UTILS (extend or make object of class)
+    - get WebElements from PAGES
+4. Utils
+        - commonMethods (that we can reuse)
+        - ReadingProperties
+        - ExcelProperties
+
+
+        With page factory:
+
+Page factory is a class which allows us to interact with elements stored in each class
+Comes from Selenium
+Initializes all WebElements
+
+What is the difference between Page Object Model (POM) and Page Factory:
+Page Object is a class that represents a web page and hold the functionality and members.
+Page Factory is a way to initialize the web elements you want to interact with within the page object when you create an
+instance of it.

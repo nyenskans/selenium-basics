@@ -1,0 +1,8 @@
+
+                            Screenshots
+
+Why do we need screenshots in testing?
+In testing it's very important to take screenshots in order to prove that our tests covered certain functionality
+and to report malfunctioning
+
+In Selenium in order to take screenshots we will be using TakesScreenshot interface

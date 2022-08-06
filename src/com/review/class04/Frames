@@ -1,0 +1,6 @@
+
+
+Handling Frames in Selenium Webdriver :
+Frame/iFrame is nothing but another WebElement in html page, which displays another part of a webpage.
+Both Frame and iFrame are same for Selenium webdriver,
+Selenium does not differentiate them, so it can handle both of them in same way.

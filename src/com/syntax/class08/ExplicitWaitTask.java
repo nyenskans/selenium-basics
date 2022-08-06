@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ExplicitWaitTask {
-    /**
+    /*
      *  navigate http://syntaxprojects.com/dynamic-elements-loading.php
      *  click on start button
      *  get the text
@@ -19,12 +19,24 @@ public class ExplicitWaitTask {
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "/Users/katarinasusic/IdeaProjects/SeleniumBasics/drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
-        driver.get("url");
-        WebDriverWait wait = new WebDriverWait(driver, 20);
+        driver.get(url);
         WebElement startButton = driver.findElement(By.id("startButton"));
-        wait.until(ExpectedConditions.visibilityOf(startButton));
         startButton.click();
-        
+        // creating object of WebDriverWait class
+        WebDriverWait wait = new WebDriverWait(driver, 20);
+
+        // using .until() method with ExpectedConditions class to wait for the element to load
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h4[contains(text(), 'Welcome')]")));
+        // create webElement of the message
+        WebElement message = driver.findElement(By.xpath("//h4[contains(text(), 'Welcome')]"));
+        // use method .getText() to get the text of that WebElement and print it
+        System.out.println(message.getText());
+
+        // in real life <h> tags change frequently; when we have a changing environment we can use this in xpath to
+        // identify any tag in the dom:
+        // we can use the * instead of the tag:
+       // WebElement message = driver.findElement(By.xpath("//*[contains(text(), 'Welcome')]"));
+
 
     }
 }

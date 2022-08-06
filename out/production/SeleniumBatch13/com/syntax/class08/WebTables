@@ -1,0 +1,41 @@
+                                    WebTables:
+
+Webtables are elements on the web page, which consist of rows, columns and headers (sometimes)
+
+Types of WebTables:
+1. Static WebTables (doesn't change)
+2. Dynamic WebTables (changes in size (+- number of rows/columns))
+
+WebTables consist of different sections or parts in html:
+<table>
+    <thead>             (table header)
+        <tr>            (table row)
+            <th></th> -- column data or heading data (what the header row consists of)
+        </tr>
+    </thead>
+    <tbody>             (table body)
+        <tr>            (table rows in the body)
+            <td></td> -- table data (in each row)
+        </tr>
+    </tbody>
+</table>
+In some cases there won't be <thead> (header), but instead the header will be in the table body
+
+<th> header data (columns)
+<td> table data (in the body)
+
+To data from WebTables, we need to store it in a List (just the data)
+
+HW
+1.
+go to https://the-internet.herokuapp.com/dynamic_controls
+click on checkbox and click on remove
+verify the text
+click on enable verify the textBox is enabled
+enter text and click disable
+verify the textBox is disabled
+2.
+create a package and name it as utils
+create a class and name as CommonMethods
+create functions (methods) to open and quit the browsers
+open method has to accept a url as a parameter

@@ -1,0 +1,10 @@
+                    Actions class
+
+ Given by Selenium to capture keyboard and mouse events such as:
+ move to element
+ drag and drop
+
+ double click
+ right click
+
+ If regular click doesn't work, we can use the alternative way of performing a click, by using Actions class click methods
